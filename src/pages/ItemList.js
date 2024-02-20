@@ -1,3 +1,6 @@
+import Router from "../router/Router";
+import { ROUTE_PATH } from "../constants";
+
 export default class ItemListPage {
   constructor({ $target }) {
     this.$target = $target;
@@ -9,6 +12,7 @@ export default class ItemListPage {
         { id: 3, text: "아이템3" },
       ],
     };
+    this.router = new Router(this.$target);
   }
 
   render() {
@@ -26,5 +30,15 @@ export default class ItemListPage {
     `;
 
     this.$target.appendChild(this.$page);
+
+    const $itemList = document.querySelector(".list");
+
+    $itemList.addEventListener("click", (e) => {
+      const $item = e.target.closest("li");
+      if ($item) {
+        const { id } = $item.dataset;
+        this.router.changeRoute(ROUTE_PATH.itemDetail, id);
+      }
+    });
   }
 }

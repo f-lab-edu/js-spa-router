@@ -1,6 +1,7 @@
 export default class ItemDetailPage {
-  constructor({ $target }) {
+  constructor({ $target, params }) {
     this.$target = $target;
+    this.itemId = params.id;
     this.$page = document.createElement("div");
   }
 
