@@ -5,10 +5,3 @@ export default function App({ $target }) {
 
   router.route();
 }
-
-// export default class App {
-//   constructor($target) {
-//     this.router = new Router($target);
-//     this.router.route();
-//   }
-// }
