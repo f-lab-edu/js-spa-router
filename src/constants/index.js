@@ -1,5 +1,5 @@
 export const REG_EXP = {
-  dynamicRoute: /\:\w+/g,
+  dynamicRoute: /:\w+/g,
 };
 
 export const ROUTE_PATH = {

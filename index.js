@@ -1,3 +1,5 @@
 import App from "./src/App.js";
 
-new App(document.querySelector("#app"));
+const app = new App({ $target: document.querySelector("#app") });
+
+window.addEventListener("DOMContentLoaded", app);

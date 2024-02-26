@@ -17,7 +17,7 @@ export default class Router {
 
   changeRoute(path, params) {
     let routePath = path;
-    if (!!params) {
+    if (params) {
       routePath = path.replace(REG_EXP.dynamicRoute, params);
     }
 
