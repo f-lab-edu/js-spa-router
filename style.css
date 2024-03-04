@@ -2,6 +2,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -74,4 +76,31 @@ textarea:not([rows]) {
 
 :target {
   scroll-margin-block: 5ex;
+}
+
+#header {
+  height: 60px;
+  border-bottom: 1px solid gray;
+}
+
+.navbar {
+  height: 100%;
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar__item {
+  padding: 0 8px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.navbar__item > a {
+  padding: 12px 10px;
+  text-decoration: none;
 }
