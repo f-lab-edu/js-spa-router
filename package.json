@@ -1,0 +1,15 @@
+{
+  "name": "spa-router",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html -p 3100"
+  },
+  "keywords": [],
+  "author": "jbkang",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
