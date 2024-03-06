@@ -1,14 +1,16 @@
-import Home from "./src/pages/Home";
-import About from "./src/pages/About";
-import Item from "./src/pages/Item";
+import Router from "./src/Router";
 
-const $app = document.getElementById("app");
-const routes = {
-  "/": Home,
-  "/about": About,
-  "/item": Item,
-};
-const { pathname } = window.location;
-const Component = routes[pathname];
+window.addEventListener("DOMContentLoaded", () => {
+  const router = new Router();
 
-$app.innerHTML = Component();
+  router.route();
+
+  document.querySelector(".navbar ul").addEventListener("click", (e) => {
+    e.preventDefault();
+    const $link = e.target.closest("li a");
+
+    if ($link) {
+      router.onNavigate($link.getAttribute("href"));
+    }
+  });
+});
