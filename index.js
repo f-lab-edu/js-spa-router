@@ -1,10 +1,10 @@
 import Router from "./src/Router";
 
-const router = new Router();
-
-router.route();
-
 window.addEventListener("DOMContentLoaded", () => {
+  const router = new Router();
+
+  router.route();
+
   document.querySelector(".navbar ul").addEventListener("click", (e) => {
     e.preventDefault();
     const $link = e.target.closest("li a");
